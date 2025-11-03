@@ -117,7 +117,7 @@ class WL4World(World):
         "map_page_folder": "wl4_jth",
         "map_page_maps": "maps/maps.json",
         "map_page_locations": "locations/locations.json",
-#        "map_page_setting_key": "", # Need to figure out what this means
+        "map_page_setting_key": "wl4_room_{team}_{player}",
         "map_page_index": map_page_index,
     }
 
