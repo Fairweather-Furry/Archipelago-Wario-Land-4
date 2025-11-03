@@ -41,6 +41,9 @@ class WL4Web(WebWorld):
     tutorials = [setup_en]
     option_groups = wl4_option_groups
 
+def map_page_index(idx):
+    return int(idx or 0)
+
 
 class WL4World(World):
     """
@@ -108,6 +111,14 @@ class WL4World(World):
         "Hotel Horror": set(get_level_locations(Passage.SAPPHIRE, 3)),
         "Catbat Treasures": set(get_level_locations(Passage.SAPPHIRE, 4)),
         "Golden Passage": set(get_level_locations(Passage.GOLDEN, 0)),
+    }
+
+    tracker_world = {
+        "map_page_folder": "wl4_jth",
+        "map_page_maps": "maps/maps.json",
+        "map_page_locations": "locations/locations.json",
+#        "map_page_setting_key": "", # Need to figure out what this means
+        "map_page_index": map_page_index,
     }
 
     web = WL4Web()
